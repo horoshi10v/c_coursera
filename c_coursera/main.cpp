@@ -9,14 +9,23 @@
 #include <string>
 #include <math.h>
 #include <iostream>
+#include <vector>
 using namespace std;
 
 int main(int argc, const char * argv[]) {
-   int A, B;
-    cin >> A >> B;
-    while (A>0 && B>0 )
-    if (A>B) A = A % B;
-    else B = B % A;
-    cout<<A+B;
-     return 0;
+    int N,c;
+    vector<int> V;
+    cin>>N;
+    //деление по алгоритму
+    while (N!=0) {
+        c=N%2;
+        N=N/2;
+        V.push_back(c);
+    }
+    //обратная запись и вывод
+    for (long i = V.size() - 1; i >= 0; --i) {
+            cout << V[i];
+     }
+    
+    return 0;
     }
