@@ -12,16 +12,11 @@
 using namespace std;
 
 int main(int argc, const char * argv[]) {
-    string a;
-    cin>>a;
-    int i=0,b=0;
-    for (auto c : a){
-        if (c =='f'){
-            b++;
-        if(b==2){cout<<i;}
-        }
-        i++;}
-    if (b==1){cout<<"-1";}
-    else if (b==0){cout <<"-2";}
-    return 0;
-}
+   int A, B;
+    cin >> A >> B;
+    while (A>0 && B>0 )
+    if (A>B) A = A % B;
+    else B = B % A;
+    cout<<A+B;
+     return 0;
+    }
